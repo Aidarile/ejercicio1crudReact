@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+:root {
+    --background-color: #121212;
+    --background-color-ligth: #1b1b1b;
+    --background-color-ligth-secondary: #121212c3;
+    --text-color: #dddddd;
+    --text-color-secondary: #ffffffd5;
+    --accent-color: #0392ea;
+    --accent-color-secondary: #0392eac9;
+}
+
+body {
+    margin: 0; /*quitamos el por defecto del margen*/
+    background-color: var(--background-color-ligth);
+    color: var(--text-color);
+    font-family: "PT Sans Narrow", serif;
+}
+
+* {
+    box-sizing: border-box; /*sirve para que el tamaño del recuadro sea como el de la pagina y no se descuadre*/
+}
