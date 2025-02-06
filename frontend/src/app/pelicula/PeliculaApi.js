@@ -17,6 +17,53 @@ const getAllFilms = async () => {
     } catch(err) {
         console.error(err)
     }
+};
+
+const postFilm = async (pelicula) => {
+    try {
+
+        const response = await fetch(urlBase + "/movies", {
+            method: "POST",
+            body: JSON.stringify({
+                imdb: {rating: 5, votes: 1000},
+                title: pelicula.titulo,
+                year: pelicula.anyo,
+                director: pelicula.director,
+                plot: pelicula.plot,
+                genres: pelicula.generos,
+                poster: pelicula.poster
+
+            }),
+            headers: {
+                "content-type": "application/json; charset = UTF-8",
+            },
+        })
+
+        if (!response.ok) {
+            throw new Error("Error al crear pelicula")
+        }
+        console.log("Insertado");
+
+    } catch (err) {
+        console.error(err)
+    }
 }
 
-export {getAllFilms}
+const deleteFilm = async (id) => {
+    try {
+        const response = await fetch(urlBase + "/movies/" + id, {
+            method: "DELETE"
+        })
+        if (!response.ok) {
+            throw new Error("Error al eliminar")
+        }
+        const result = response.json()
+        return result
+
+    } catch(err) {
+        console.error(err)
+
+    }
+}
+
+export {getAllFilms, postFilm, deleteFilm}

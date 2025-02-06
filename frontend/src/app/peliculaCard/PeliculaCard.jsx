@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 
 import "/src/app/peliculaCard/PeliculaCard.css";
 
-const PeliculaCard = ({pelicula}) => {
+const PeliculaCard = ({pelicula, peliculaDetalle}) => {
     return(
-        <div className="pelicula-card">
+        <div className="pelicula-card" onClick={() => peliculaDetalle(pelicula)}>
             <div className="pelicula-card-poster">
                 <img src={pelicula.poster}/>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /*src/listaPeliculas/ListaPeliculas.jsx*/
 
 import { useEffect, useState } from "react"
@@ -6,7 +7,7 @@ import Pelicula from "../pelicula/Pelicula";
 import PeliculaCard from "../peliculaCard/PeliculaCard";
 import "/src/app/listaPeliculas/ListaPeliculas.css";
 
-const ListaPeliculas = () => {
+const ListaPeliculas = ({peliculaDetalle}) => {
     const [listaPeliculas, setListaPeliculas] = useState([]);
 
     useEffect(() => {
@@ -17,7 +18,7 @@ const ListaPeliculas = () => {
         const res = await getAllFilms();
         const newArray = res.status.map(
             (p) => new Pelicula(
-            p.id,
+            p._id,
             p.imbd,
             p.title,
             p.year,
@@ -33,7 +34,7 @@ const ListaPeliculas = () => {
     return (
         <div className="contenedor-lista">
             {listaPeliculas.map((p) => 
-                <PeliculaCard key={p.id} pelicula={p}></PeliculaCard>
+                <PeliculaCard key={p.id} pelicula={p} peliculaDetalle={peliculaDetalle}></PeliculaCard>
             )}
         </div>
     )
