@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-/*src/app/agregarPelicula/AgregarPelicula.jsx*/
+import "./AgregarPelicula.css"
 
 import { useState } from "react"
 import { postFilm } from "../pelicula/PeliculaApi";
