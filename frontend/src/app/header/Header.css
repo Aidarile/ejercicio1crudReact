@@ -1,33 +1,33 @@
 /* Estilos para el formulario de agregar película */
 .contenedor-agregar {
-    display: flex;
+    display: flex; /* Organiza los elementos en columna */
     flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    gap: 10px; /* Espaciado entre elementos */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 50px auto; /* Centra el formulario en la página */
+    padding: 20px; /* Espaciado interno */
+    background-color: #222; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra ligera */
 }
 
 label {
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 5px;
+    color: #fff; /* Color del texto */
+    font-size: 14px; /* Tamaño de fuente */
+    margin-bottom: 5px; /* Espaciado debajo de las etiquetas */
 }
 
 input {
     padding: 8px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    outline: none;
+    border: 1px solid #555; /* Borde gris oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    outline: none; /* Elimina el contorno al hacer foco */
 }
 
 button {
-    background-color: #007bff;
+    background-color: #007bff; /* Azul brillante */
     color: white;
     padding: 10px;
     border: none;
@@ -37,24 +37,24 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
 }
 
 .agregar-contenido-genero {
-    display: flex;
-    gap: 10px;
+    display: flex; /* Organiza los elementos en fila */
+    gap: 10px; /* Espaciado entre input y botón */
 }
 
 .agregar-contenido-genero input {
-    flex: 1;
+    flex: 1; /* Hace que el input ocupe todo el espacio disponible */
 }
 
 p {
-    color: #ddd;
-    background-color: #444;
+    color: #ddd; /* Color de texto claro */
+    background-color: #444; /* Fondo gris oscuro */
     padding: 5px 10px;
     border-radius: 5px;
-    display: inline-block;
+    display: inline-block; /* Asegura que los géneros se muestren en línea */
     margin: 5px 0;
 }
 
